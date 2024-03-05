@@ -1,4 +1,4 @@
-import ListGroup from "./components/LsitGroup";
+import ListGroup from "./components/ListGroup";
 
 function App (){
  
