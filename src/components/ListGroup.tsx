@@ -1,5 +1,6 @@
-function ListGroup () {
-    return <h2>List Group</h2>
-    
+function ListGroup() {
+
+    return <h1>List Group</h1>;
+
 }
 export default ListGroup;
