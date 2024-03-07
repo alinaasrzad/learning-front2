@@ -11,8 +11,8 @@ function ListGroup() {
   return (
 
     <ul className="list-group">
-
-   { items.map(item => <li>{item} </li>)}
+     <h1>List Group</h1>
+   { items.map(item => <li>{item}</li>)}
     </ul>
  
   );
