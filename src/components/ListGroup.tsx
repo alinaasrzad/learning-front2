@@ -1,14 +1,21 @@
 function ListGroup() {
-  const items = ["tehran", "shiraz", "mashhad", "tabriz"];
+  let items = ["tehran", "shiraz", "mashhad", "tabriz"];
+  items = [];
+//   const message = items.length === 0 ? <p>No item found</p> : null;
 
+  const getMessage = ()=>{
+  return items.length === 0 ? <p>No item found</p> : null;
+  }
   return (
-    <ul className="list-group m-4 my-3">
-      <h1 className="">List Group</h1>
-
-      {items.map((item) => (
-        <ul key={item}>{item}</ul>
-      ))}
-    </ul>
+    <>
+      <h1>List</h1>
+      {getMessage( )}
+      <ul>
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </>
   );
 }
 export default ListGroup;
