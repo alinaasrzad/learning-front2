@@ -10,9 +10,9 @@ function ListGroup() {
    
   return (
 
-    <ul className="list-group">
-     <h1>List Group</h1>
-   { items.map(item => <li>{item}</li>)}
+    <ul className="list-group m-4 my-3">
+     <h1 className="">List Group</h1>
+   { items.map(item => <ul >{item}</ul>)}
     </ul>
  
   );
