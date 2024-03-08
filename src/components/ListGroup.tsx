@@ -1,21 +1,24 @@
 function ListGroup() {
   let items = ["tehran", "shiraz", "mashhad", "tabriz"];
-  items = [];
-//   const message = items.length === 0 ? <p>No item found</p> : null;
 
-  const getMessage = ()=>{
-  return items.length === 0 ? <p>No item found</p> : null;
-  }
+  //   const message = items.length === 0 ? <p>No item found</p> : null;
+
   return (
     <>
       <h1>List</h1>
-      {getMessage( )}
-      <ul>
+      {items.length === 0 && <p>No item found</p>}
+      <ul className="list-group">
         {items.map((item) => (
-          <li key={item}>{item}</li>
+          <li
+            className="list-group-item"
+            key={item}
+            onClick={() => console.log("clicked")}
+          >
+            {item}
+          </li>
         ))}
       </ul>
     </>
-  );
+  ); 
 }
 export default ListGroup;
