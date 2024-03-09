@@ -7,8 +7,8 @@ function ListGroup() {
   let items = ["tehran", "shiraz", "mashhad", "tabriz"];
 
  // call a hook (feater in react)
- const [selectedindex, setSelectedindex] = useState(-1);
- const [name,setName] = useState('');
+ const [Selectedindex, setSelectedindex] = useState(-1);
+//  const [name,setName] = useState('');
 
   //Event handler 
 //     
@@ -38,9 +38,9 @@ function ListGroup() {
 <ul className="list-group">
   {items.map((item, index) => (
     <li  
-      className={selectedindex === index ? 'list-group-item active ': 'list-group-item' }
+      className={Selectedindex === index ? 'list-group-item active ': 'list-group-item' }
       key={item }
-      onClick={ () => {selectedindex = index;}}
+      onClick={ () => {setSelectedindex (index);}}
     >
       {item}
     </li>
