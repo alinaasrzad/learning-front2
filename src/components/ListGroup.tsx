@@ -40,7 +40,7 @@ function ListGroup() {
     <li  
       className={Selectedindex === index ? 'list-group-item active ': 'list-group-item' }
       key={item }
-      onClick={ () => {setSelectedindex (index);}}
+      onClick={ () => {setSelectedindex (index);console.log(index)}}
     >
       {item}
     </li>
