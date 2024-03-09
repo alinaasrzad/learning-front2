@@ -1,9 +1,14 @@
 // import { MouseEvent } from "react";
 
+import { useState } from "react";
+
 
 function ListGroup() {
   let items = ["tehran", "shiraz", "mashhad", "tabriz"];
- let selectedindex = 0;
+
+ // call a hook (feater in react)
+ const [selectedindex, setSelectedindex] = useState(-1);
+ const [name,setName] = useState('');
 
   //Event handler 
 //     
