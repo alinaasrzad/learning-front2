@@ -1,10 +1,12 @@
 
-
-const Alert = () => {
+interface Props {
+    children : string;
+}
+const Alert = ( {children}: Props) => {
   return (
    
-    <div>Alert</div>
+    <div className="alert alert-info">{children}</div>
   )
-}
+} 
 
-export default Alert
+export default Alert ;
