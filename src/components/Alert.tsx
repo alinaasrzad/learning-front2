@@ -1,11 +1,16 @@
-
+import { ReactNode } from "react";
+import { useState } from "react";
 interface Props {
-    children : string;
+    children : ReactNode;
+    onClose :()=>void; 
 }
-const Alert = ( {children}: Props) => {
+const Alert = ( {children ,onClose}: Props) => {
+    const [alertVisible , setAlertVisibilty] = useState(false)
   return (
    
-    <div className="alert alert-info">{children}</div>
+    <div className="alert alert-info">{children}  
+     <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"  onClick= {onClose}></button>
+     </div>
   )
 } 
 
