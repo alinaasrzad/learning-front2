@@ -5,6 +5,8 @@ import { useState } from "react";
 interface Props {
     items : string [];
     heading :string; 
+    // (item :string)=> void
+    onSelectItem :(item:string)=>void;
 }
 
 function ListGroup({items , heading }:Props) {
