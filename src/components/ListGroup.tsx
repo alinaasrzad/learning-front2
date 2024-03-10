@@ -9,7 +9,7 @@ interface Props {
     onSelectItem :(item:string)=>void;
 }
 
-function ListGroup({items , heading }:Props) {
+function ListGroup({items , heading,onSelectItem }:Props) {
    
 
   // call a hook (feater in react)
@@ -52,7 +52,8 @@ function ListGroup({items , heading }:Props) {
             key={item}
             onClick={() => {
               setSelectedindex(index);
-              console.log(index);
+              onSelectItem(item)
+              console.log();
             }}
           >
             {item}
