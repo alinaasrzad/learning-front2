@@ -2,6 +2,7 @@
 import { useState } from "react";
 import ListGroup from "./components/ListGroup/index";
 import './App.css'
+import Like from "./components/Like";
 import Alert from "./components/Alert";
 import { FcLike } from "react-icons/fc";
 import { CiHeart } from "react-icons/ci";
@@ -26,8 +27,8 @@ function App() {
       <Button color="primary"  onClick={() => setAlertVisibility(true) }>
         click here 
       </Button>  
-      <FcLike  size="40" onClick ={()=> console.log('clicked') } ></  FcLike >
-      <CiHeart size="40" />
+     
+      <Like onClick={()=>console.log('clicked ')}/>
     </div> 
   );
 }
