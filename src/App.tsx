@@ -1,8 +1,9 @@
 
 import { useState } from "react";
+import ListGroup from "./components/ListGroup/index";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
-import ListGroup from "./components/ListGroup/ListGroup";
+// import ListGroup from "./components/ListGroup/ListGroup";
 
 function App() {
   let items =[ "iran" , "tabriz","ghom","siraz"]
