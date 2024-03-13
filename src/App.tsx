@@ -10,8 +10,17 @@ import Button from "./components/Buttons/Button";
 // import ListGroup from "./components/ListGroup/ListGroup";
 
 function App() {
+
   let items =[ "iran" , "tabriz","ghom","siraz"]
+  const [isVisble,setVisibility] =useState(false)
+  let count = 0;
  const [alertVisible , setAlertVisibility] = useState(false)
+ const handleClick = () =>{
+  setVisibility(true); 
+  count ++; 
+  //setname('alin')
+  console.log(isVisble,count);
+ }
 //  const [clickicon , setclickicon] = useState(true)
   return (
     <div>
@@ -29,6 +38,7 @@ function App() {
       </Button>  
      
       <Like onClick={()=>console.log('clicked ')}/>
+      <button onClick={handleClick}>show</button>
     </div> 
   );
 }
