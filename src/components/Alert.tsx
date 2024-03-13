@@ -12,7 +12,7 @@ const Alert = ( {children ,onClose}: Props) => {
     //  <button type="button" className="btn-close primary mx-104" data-bs-dismiss="alert" aria-label="Close"  onClick= {onClose}></button>
     //  </div>
      <div className="alert alert-info alert-dismissible fade show" role="alert">{children} 
-     <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+     <strong>ramz eshtebah!</strong> deqat konid .
      <button type="button" className="btn-close " data-bs-dismiss="alert" aria-label="Close"  onClick= {onClose}></button>
    </div>
   )
