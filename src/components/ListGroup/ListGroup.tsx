@@ -68,7 +68,7 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
           </ListItem>
         ))}
       </List>
-    </>
+    </> 
   );
 }
 export default ListGroup;
