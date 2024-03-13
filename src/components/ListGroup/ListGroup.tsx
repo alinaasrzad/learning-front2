@@ -1,20 +1,31 @@
 // import { MouseEvent } from "react";
-// {item: [] , heading :string } 
- import styles from  './ListGroup.module.css';
- import styled from 'styled-components'
+// {item: [] , heading :string }
+import styles from "./ListGroup.module.css";
+import styled from "styled-components";
 import { useState } from "react";
+const List = styled.ul`
+  list-style: none;
+  padding: 0;
+`;
+interface ListItemProps {
+  active: boolean;
+}
+const ListItem = styled.li<ListItemProps>`
+  list-style: none;
+  padding: 5px 0;
+  background: ${(props) => (props.active ? "blue " : "none")};
+`;
+
 interface Props {
-    items : string [];
-    heading :string; 
-    // (item :string)=> void
-    onSelectItem :(item:string)=>void;
+  items: string[];
+  heading: string;
+  // (item :string)=> void
+  onSelectItem: (item: string) => void;
 }
 
-function ListGroup({items , heading,onSelectItem }:Props) {
-   
-
+function ListGroup({ items, heading, onSelectItem }: Props) {
   // call a hook (feater in react)
-  const [Selectedindex, setSelectedindex] = useState(-1);
+  const [Selectedindex, setSelectedindex] = useState(0);
   //  const [name,setName] = useState('');
 
   //Event handler
@@ -42,26 +53,22 @@ function ListGroup({items , heading,onSelectItem }:Props) {
     <>
       <h1>{heading}</h1>
       {items.length === 0 && <p>No item found</p>}
-      <ul className={[styles.ListGroup,styles.container].join('  ')}>
+      <List className={[styles.ListGroup, styles.container].join("  ")}>
         {items.map((item, index) => (
-          <li
-            className={
-              Selectedindex === index
-                ? "list-group-item active "
-                : "list-group-item"
-            }
+          <ListItem
+            active={index === Selectedindex}
             key={item}
             onClick={() => {
               setSelectedindex(index);
-              onSelectItem(item)
-              console.log();
+              onSelectItem(item);
+             
             }}
           >
             {item}
-          </li>
+          </ListItem>
         ))}
-      </ul>
+      </List>
     </>
   );
-} 
+}
 export default ListGroup;

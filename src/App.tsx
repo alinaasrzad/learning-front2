@@ -8,7 +8,7 @@ import Button from "./components/Button";
 
 function App() {
   let items =[ "iran" , "tabriz","ghom","siraz"]
- const [alertVisible , setAlertVisibili ty] = useState(false)
+ const [alertVisible , setAlertVisibility] = useState(false)
 //  const [clickicon , setclickicon] = useState(true)
   return (
     <div>
