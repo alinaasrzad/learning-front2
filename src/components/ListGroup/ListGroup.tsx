@@ -55,7 +55,7 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
       {items.length === 0 && <p>No item found</p>}
       <List className={[styles.ListGroup, styles.container].join("  ")}>
         {items.map((item, index) => (
-          <ListItem
+          <ListItem color="primary"
             active={index === Selectedindex}
             key={item}
             onClick={() => {
