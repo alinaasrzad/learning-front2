@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ListGroup from "./components/ListGroup/index";
 // import "./App.css";
-import Movie from "./components/Movie/Movie";
+
 import Like from "./components/Like";
 import Alert from "./components/Alert";
 
@@ -45,7 +45,7 @@ function App() {
 
       <Like onClick={() => console.log("clicked ")} />
       <button onClick={handleClick}>show</button>
-      <Movie/>
+     
       
     </div>
   );

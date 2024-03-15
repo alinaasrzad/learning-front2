@@ -6,8 +6,8 @@ interface Props {
 }
 const Alert = ( {children ,onClose}: Props) => {
     const [alertVisible , setAlertVisibilty] = useState(false)
-  return (
-   
+  return (  
+    
     // <div className="alert alert-danger">  <strong>Holy guacamole!</strong>
     //  <button type="button" className="btn-close primary mx-104" data-bs-dismiss="alert" aria-label="Close"  onClick= {onClose}></button>
     //  </div>
