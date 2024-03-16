@@ -44,7 +44,7 @@ function App() {
       </Button>
 
       <Like onClick={() => console.log("clicked ")} />
-      <button onClick={handleClick}>show</button>
+      <button className="btn btn-danger m-4" onClick={handleClick}>show</button>
      
       
     </div>
