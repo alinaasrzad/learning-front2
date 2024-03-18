@@ -1,12 +1,12 @@
 //PascalCasing
-let count =0
+let count = 0;
 const Message= () =>{
     //jsx: javascript xml
-   count ++;
+   
+   count++;
    return <div>
-    <div> Message {count++}</div>
-    <div> Message {count++}</div>
-   <div> Message {count++}</div>
+    <div> Message {count}</div>
+    
    </div>
 
 //     if (name)
