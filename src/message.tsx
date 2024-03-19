@@ -5,7 +5,7 @@ const Message= () =>{
    
    count++;
    return <div>
-    <div> Message {count}</div>
+    <div> Message {count++}</div>
     
    </div>
 
